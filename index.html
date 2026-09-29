@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Anjani Sai Vivek Reddy | Professional Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <!-- Intro Overlay Screen (Toss Coin) -->
+    <div id="intro-screen" class="active">
+        <div class="intro-card">
+            <div class="intro-avatar-container">
+                <img src="profile.jpg" alt="M. Anjani Sai Vivek Reddy" class="intro-avatar">
+            </div>
+            <div class="intro-badge"><i class="fa-solid fa-cube"></i> INTERACTIVE 3D PORTFOLIO</div>
+            <h1>M. Anjani Sai Vivek Reddy</h1>
+            <p class="subtitle">Computer Science Engineer & AI/ML Developer</p>
+            <p class="instruction-text"><i class="fa-solid fa-circle-play"></i> Click below to toss the coin and launch the 3D light plate presentation</p>
+            <button id="toss-btn" class="pro-btn">
+                <i class="fa-solid fa-coins"></i> Toss Coin to Start
+            </button>
+        </div>
+    </div>
+
+    <!-- Audio & System HUD Controls -->
+    <div id="audio-hud">
+        <button id="mute-btn" class="system-hud-btn" title="Toggle Sound">
+            <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button id="replay-btn" class="system-hud-btn" title="Replay Intro Coin Toss">
+            <i class="fa-solid fa-rotate-left"></i>
+        </button>
+    </div>
+
+    <!-- Main Navigation HUD Header -->
+    <header id="main-hud">
+        <div class="brand">
+            <div class="brand-avatar">
+                <img src="profile.jpg" alt="M. Anjani Sai Vivek Reddy">
+            </div>
+            <div class="brand-info">
+                <span class="brand-name">M. Anjani Sai Vivek Reddy</span>
+                <span class="brand-title">CS Engineer & AI Developer</span>
+            </div>
+        </div>
+        <nav class="hud-nav">
+            <button class="nav-item active" data-index="0"><i class="fa-solid fa-user"></i> Profile</button>
+            <button class="nav-item" data-index="1"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+            <button class="nav-item" data-index="2"><i class="fa-solid fa-code"></i> Projects</button>
+            <button class="nav-item" data-index="3"><i class="fa-solid fa-microchip"></i> Skills</button>
+            <button class="nav-item" data-index="4"><i class="fa-solid fa-award"></i> Honors</button>
+            <button class="nav-item" data-index="5"><i class="fa-solid fa-address-book"></i> Extra & Ref</button>
+        </nav>
+        <div class="social-actions">
+            <a href="mailto:saivivekm28@gmail.com" title="Email" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+917846933034" title="Phone"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://github.com/AD253246" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/M.Sai vivek" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </header>
+
+    <!-- Bottom Carousel Controls -->
+    <div id="carousel-controls">
+        <button id="prev-slide-btn" class="control-btn" title="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-indicators" id="carousel-indicators">
+            <!-- Dynamic Dots Injected via JS -->
+        </div>
+        <button id="next-slide-btn" class="control-btn" title="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+        <button id="open-active-modal-btn" class="action-view-btn" title="Open Slide Details">
+            <i class="fa-solid fa-expand"></i> View Details
+        </button>
+    </div>
+
+    <!-- Interaction Guide Banner -->
+    <div id="interaction-hint">
+        <span><i class="fa-solid fa-arrows-left-right"></i> Scroll/Drag to rotate 3D view | Click any card or "View Details" to expand</span>
+    </div>
+
+    <!-- Slide Details Modal Window -->
+    <div id="detail-modal" class="modal-backdrop">
+        <div class="modal-container">
+            <button id="close-modal-btn" class="modal-close-btn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <div class="modal-category-tag" id="modal-category"><i class="fa-solid fa-layer-group"></i> SECTION DETAILS</div>
+                <h2 id="modal-title">Section Title</h2>
+                <div class="modal-subtitle" id="modal-subtitle">Section Subtitle</div>
+            </div>
+            <div class="modal-body" id="modal-content">
+                <!-- Dynamic HTML Content Injected via JS -->
+            </div>
+            <div class="modal-footer">
+                <button id="modal-prev-btn" class="modal-nav-btn"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+                <button id="modal-next-btn" class="modal-nav-btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js & Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- Application Engine Script -->
+    <script src="script.js"></script>
+</body>
+</html>
