@@ -122,7 +122,7 @@ const PORTFOLIO_DATA = [
                     </div>
 
                     <div class="info-card">
-                        <h3>2. Insurance Cost Price Prediction <span class="badge">06/2025</span></h3>
+                        <h3>2. Insurance Cost Price Prediction <span class="badge">Jun 2025</span></h3>
                         <div class="meta">Machine Learning Regression System</div>
                         <ul>
                             <li>Built a regression model using <strong>Random Forest</strong> to predict medical insurance charges from demographic & health data.</li>
@@ -155,7 +155,7 @@ const PORTFOLIO_DATA = [
                     </div>
 
                     <div class="info-card">
-                        <h3>4. Face Recognition With/Without Cap <span class="badge">08/2024</span></h3>
+                        <h3>4. Face Recognition With/Without Cap <span class="badge">Aug 2024</span></h3>
                         <div class="meta">Computer Vision & Deep Learning</div>
                         <ul>
                             <li>Built a face recognition system using <strong>TensorFlow/Keras</strong> detecting individuals with or without a cap.</li>
