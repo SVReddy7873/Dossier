@@ -95,7 +95,7 @@ const PORTFOLIO_DATA = [
         category: "KEY INNOVATIONS",
         title: "Featured Projects",
         subtitle: "AI/ML Solutions & Full-Stack Systems",
-        summary: "AgriAid (2025-26), Insurance Predictor (06/2025), Smart Health Way (Jan 2025), Face Recognition (08/2024), EcoTrack (Apr 2023).",
+        summary: "AgriAid (2025-26), Insurance Predictor (Jun 2025), Smart Health Way (Jan 2025), Face Recognition (Aug 2024), EcoTrack (Apr 2023).",
         detailsHtml: `
             <div class="profile-modal-grid">
                 <div class="profile-photo-column">
